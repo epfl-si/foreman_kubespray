@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.authors     = ['EPFL IDEV-FSD']
   s.email       = ['idev-fsd@groupes.epfl.ch']
   s.homepage    = 'https://github.com/epfl-si/foreman_kubespray'
+  s.summary     = 'Ansible integration with Kubespray'
   s.description = 'Run Kubespray on host groups. Built on top of foreman_ansible'
 
   s.add_dependency 'deface'
