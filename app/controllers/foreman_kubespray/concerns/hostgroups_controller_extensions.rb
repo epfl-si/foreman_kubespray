@@ -11,6 +11,7 @@ module ForemanKubespray
         composer.trigger
         redirect_to job_invocation_path(composer.job_invocation)
       rescue Foreman::Exception => e
+        logger.error "error in HostgroupController#play_kubespray: #{e.class} #{e.message}\n#{e.backtrace.join("\n")}"
         error e.message
         redirect_to hostgroups_path
       end
