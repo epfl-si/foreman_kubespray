@@ -15,6 +15,15 @@ module ForemanKubespray
         error e.message
         redirect_to hostgroups_path
       end
+
+      def action_permission
+        case params[:action]
+        when 'play_kubespray'
+          :update
+        else
+          super
+        end
+      end
     end
   end
 end
