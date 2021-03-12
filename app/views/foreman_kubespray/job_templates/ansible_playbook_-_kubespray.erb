@@ -45,7 +45,9 @@ feature: kubespray_run
           {% for host in hostvars %}
                   {{ host }}:
                     {{ _foreman_inventory["_meta"]["hostvars"][host] | to_yaml |
-                       regex_replace('(?m)^kubespray_') | indent(width=10) }}
+                       regex_replace('(?m)^(?=\w)(?!ansible_|foreman|(kube(spray)?_))', '__DONOTWANT_') |
+                       regex_replace('(?m)^kubespray_') |
+                       indent(width=10) }}
           {% endfor %}
               # https://github.com/kubernetes-sigs/kubespray/blob/master/docs/ansible.md#inventory
               kube-node:
