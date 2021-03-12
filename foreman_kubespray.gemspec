@@ -6,11 +6,12 @@ require 'date'
 Gem::Specification.new do |s|
   s.name        = 'foreman_kubespray'
   s.version     = ForemanKubespray::VERSION
-  s.license     = 'GPL-3.0'
+  s.licenses    = ['GPL-3.0', 'MIT']
   s.date        = Date.today.to_s
   s.authors     = ['EPFL IDEV-FSD']
   s.email       = ['idev-fsd@groupes.epfl.ch']
-  s.summary     = 'Adds a “Kubespray” button to host groups. Built on top of foreman_ansible.'
+  s.homepage    = 'https://github.com/epfl-si/foreman_kubespray'
+  s.description = 'Run Kubespray on host groups. Built on top of foreman_ansible'
 
   s.add_dependency 'deface'
   s.add_dependency 'foreman_ansible'
