@@ -1,0 +1,15 @@
+<%#
+name: Ansible Playbook - Kubespray
+description_format: Invoke Kubespray's main playbook (cluster.yml) on a host group
+snippet: false
+kind: job_template
+model: JobTemplate
+job_category: Ansible Playbook
+provider_type: Ansible
+feature: kubespray_run
+%>
+
+---
+- name: Nothing here for now
+  hosts: all
+  tasks: []
